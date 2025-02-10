@@ -1,0 +1,40 @@
+SQS:
+   Pull Data
+   FIFO queues
+   Data is deleted after cosuming
+SNS:
+    Message Filtering
+    Fan-out to multiple SQS queues
+    Mainly for notification services
+    pub/sub
+
+Kinesis Data Stream :
+    Collect & store streaming data in real-time
+    Data retention upto 365 days
+    Provisioned mode / on-demand mode
+    Replay capability
+
+AWS Data Firehose / Delivery Streams:
+    Near Rela-timewith buffering capacity
+    Fully managed service 
+    No Replay capability  
+    Producers:
+      apps
+      clients
+      Kinesis
+      cloudwatch
+      IoT
+      SDK
+      Kinesis Agent
+    Consumers:
+      AWS:
+        S3
+        Redshift
+        Opensearch
+      3rd Party
+        datadog
+        Splunk
+        Newrelic
+        MongoDB
+      custom HTTP
+
