@@ -38,3 +38,8 @@ AWS Data Firehose / Delivery Streams:
         MongoDB
       custom HTTP
 
+Amazon MQ:
+    Managed message broker service for 
+      RabbitMQ
+      ActiveMQ
+

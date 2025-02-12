@@ -1,0 +1,39 @@
+ECR - Elastic Container Registry
+  Store docker image on AWS
+  Public galler: https://gallery.ecr.aws
+  fully integrated  with ECS and backed by S3
+  Protected by IAM role
+
+EKS - Elastic Kubernetes service
+  Similar to ECS, same goal but different APi
+  opensource
+  cloud-agnostic
+  VPC--> Different AZs--> Public & provate subnets--> EKS nodes (usually EC2) with EKS pods in private subnets
+  ASG manages the EKS nodes with EC2 instances
+
+EKS node types:
+  Managed nodes
+    EC2s managed by ASG
+  Self - managed Nodes
+    From your own AMI
+  AWS Fargate
+
+EKS data volumes
+   Storage Class
+      Container Storage Interface(CSI)
+      Support EBS EFS
+      FSx for cluster  
+      FSx for NetAPP ONTAP
+
+AWS App runner
+  fully managed service to build & deploy web app.
+  auto scaling, high availability, LB, Encryption
+  Rapid Prod deployment
+
+AWS App2Conainers
+  CLI tool for migrating java & .net apps to Docker Containers
+  Lift & Shift apps from on-prem to cloud
+  Generate Cloudformation templates
+  Register Docker container to ECR
+  Deploy EKS, ECS & App Runner
+  Analyze the app--> contanerize --> Create deployment Artifact(Cloudformation template--> deploy to AWS

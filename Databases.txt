@@ -1,0 +1,93 @@
+RDBMS (=SQL/OLTP)
+    RDS 
+    Aurora
+NoSQL DB - no joins, no SQL
+    DynamobDB
+    Elasticache
+    Meptune
+    DocumentDb
+
+RDS
+    POstrgre
+    MySQL
+    SQL
+    DB2
+    MariaDB
+    - Auto scale for torage
+    - Read Replica & Multi AZ
+    - Security through IAM with secrets manager, Security groups
+    - Auto backup & Point in time backup
+    - Manual DB snapshot for longterm
+    - Managed & scheduled maintenance
+
+Aurora
+    Compatible API for Postgre /MYSQL, 
+    Stored in 6 replica across 3 AZs, Highly available, self-heal, auto-scaling
+    - Aurora Serverless
+    - Aurora Global
+    - MySQL and PostgreSQL-compatible relational database. It features a distributed, fault-tolerant, self-healing storage system that auto-scales up to 128TB per database instance. It delivers high performance and availability with up to 15 low-latency read replicas, point-in-time recovery, continuous backup to Amazon S3, and replication across 3 AZs.
+
+Elasticache:
+        - Managed Redis/Memcached
+    use cases:
+        - key/value store
+        - frequent read less write
+        - store session for website
+        - can't use SQL
+DynamoDB:
+    NoSQL Db , Millisecond latency
+    Auto scaling - On-demand capacity
+    DAX cluster for read cache, microsecond read latency
+    integrate with Lambda & Kinesis Data Stream.
+    Global table feature
+    Great for rapidly evolve schemas
+    Use cases:
+      - For migraing on-prem MongoDB NoSQL database
+      -  Serverless applications
+      - Small documents less than   100sKB
+      - Distributed serverless cache
+
+S3:
+    key/value
+    larger storage  
+    serverless scales, max object size is 5TB, versioning
+
+DocumentDB:
+    AWS form of postgre & MYSQL
+    same for MongoDB(NoSQL DB)
+    grows incemdnt of 10GB
+    auto scaled workloads with millions of requests /sec
+
+Neptune:
+    Graph DB
+    Graph Datasets for social media
+
+    Neptune streams:
+        orders sequence 
+        changes are available immediately after writing
+        no duplicates
+    Use cases:
+        send notifications
+        maintain Graph data synchronization
+
+AWS Keyspaces:
+    Apache cassandra in NoSQL
+    replicated 3 times across multi AZ
+    Uses Casandra Query Language
+
+    Use cases:
+        - store IoT device
+        time-series data
+
+AWS QLDB (Qunatum ledger DB)
+    - Ledger book for recording financial transactions
+    - Imutable system
+
+AWS Timestream
+    - time series DB
+    use cases:
+        IoT
+        operational applicatins
+        real-time analytics
+
+

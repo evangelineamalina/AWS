@@ -1,0 +1,56 @@
+Docker:
+  SD Platform to deploy Apps. Once apps are packaged as containers, it runs in the same frm irrespective of any machine
+  no compatibility issues
+  Easy to maintain
+  Any OS 
+  
+Registries:
+  Docker Hub
+Docker container managemnt on AWS:
+  Amazon ECR (Elastic Container Registry)
+  AWS Fargate
+    -Serverless
+  AWS EKS
+  AWS ECS
+
+LBs:
+  ALB
+  NLB
+  Classic LB
+
+EFS --> Compatible with ECS & fargate
+
+ECS Handson:
+ Create ECS cluster
+    services
+    task definition --> gets the image from registry
+    Infrastructure
+    ASG
+    Not opensource
+ECS Auto scaling:
+  CPU
+  Memory
+  ALB
+
+  types:
+   target tracking - Cloudwatch metric
+   step scaling - cloudwatch alarm
+   scheduling scaling - Predictable changes
+ECS cluster capacity provider
+
+
+ECS architecture1:
+  Create a ECS cluster backed by Fargate
+  Have a S3 bucket outside connected to an Eventbridge
+  Eventbridge trigger an event in a task role  inside ECS, which gets object from S3
+  The ECS task role then send the result to DynamobDB outside
+
+ECS architecture 2:
+   Create an Eventbridge which triggers a event in a task in ECS cluster
+   the task inside ECS cluster access a s3 bucket for batch processing
+   the task runs in ECS cluster backed by Fargate
+
+ECS architecture 3:
+   Create a Eventbridge that connect to a ECS cluster with n number of containers.
+   Eventbridge will get activated if there is a deletion on container and triggers a SNS notification, which in ture triggers a email to the end user aboyt the container unavailability.
+ ECS tasks (in containers)-> Event bridge --> SNS --> email
