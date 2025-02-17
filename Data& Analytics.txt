@@ -1,3 +1,76 @@
 Athena:
     Serverless query service to analyze S3
     Use Standard SQL
+    QuickSight for reporting/Dashboards
+    Use cases:
+        - Business intelligence
+        - Query VPC flow logs
+        - Query CloudTrail Logs
+        - Query ELB logs
+    Performace improvements
+        - Columnar Data
+        - Compress Data
+        - Partition Dataset in S3
+        - analyze logs in S3 for unauthorized access
+
+Redshift:
+    - based on PostgreSQL but not OLTP
+    - OLAP -online analytical processing
+    - Columnar storage of Data & Parallel Query Engine
+    Leader node -> for query planning
+    Compute node -> for performing the query
+    Provisioned mode
+    - Automatic & manual snapshots
+    - Can copy Snapshots to clsters or other AWS Regions
+    - Load data to Redshift from Kinesis/EC2/S3
+    Redshift Spectrum
+    Enhanced VPC Routing: COPY and UNLOAD traffic moving between your cluster and data repositories through your VPCs
+
+AS Opensearch --> Elastisearch
+    - Search any fields even with partial matches
+    - managed cluster / serverless cluster 
+    - Opensearch Dashboards
+    cloudwatch--> subscription fliter --> Labmda Function --> Opensearch
+    cloudwatch--> subscription fliter --> Kinesis Data firehose --> Opensearch
+
+EMR - Elastic Map Reduce
+    - Helps creating Hadoop clusters to analyze vast amout of data
+    - Cost-effective for data engineers and analysts to run applications 
+    built using open source big data frameworks such as Apache Spark, Hive, or Presto without having to operate or manage clusters.
+    use cases:
+        - ML 
+        - web indexing
+        - big data
+    nodes:
+    - master node
+    - code node
+    - task node
+
+QuickSignt
+    - serverless ML powered businesss intelligence 
+    - can be integrated with RDS, Aurora, Athena, RedShift, S3
+    - possible for Column level setup
+
+AWS Glue
+    - Extract, transform & Load (ETL)
+    - Convert Data into parquet format
+    S3--> Glue(parquet)--> s3--> Athena
+    - Glue Job bookmarhers
+    - Elastic View
+    - DataBrew
+    - Studio
+    - Streaming ETL
+
+AWS LakeFormation:
+    - Data Lake -> central place to have all your data for analysis purpose
+    - fine grained access control for your apps
+
+AWS managed service for Apache Flink
+    - FLink can read for Kinesis Data streams , but not from kinesis firehose
+
+AWS managed streaming for apache Kafka
+        Kinesys    Vs         MSK
+        1 MB size          1MB is default
+        Shards             partitions
+        shard split & merge   add partitions
+        TLS in-flight       PLAINTET or TLS 
