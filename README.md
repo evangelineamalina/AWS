@@ -1,2 +1,2 @@
 # AWS
-Contains few notes while I was preparing for the AWS Certification. 
+Contains important notes while I was preparing for the AWS Certification. 
