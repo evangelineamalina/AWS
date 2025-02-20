@@ -1,0 +1,44 @@
+Organizations:
+     - Global service
+     - manage multiple AWS
+     - Consolidated Billing across all accounts
+     - Shared reserved instances, the discounts are applied globally
+     - API to automate account creation
+    OU Root Organizational Unit
+        Business
+            - Sales
+            - Retail
+            - Finance
+        Environment
+            - Prod
+            - Dev
+            - Test
+        Project -Based
+
+    Service COntrol Policies
+
+IAM Conditions
+    aws:SourceIp
+    aws:RequestedRegion
+    ec2:ResourceTag
+    aws:MultifactorAuthPresent
+Resource based policies Vs IAM roles
+IAM Permission Boundaries
+IAM policies Evalualion logic:
+    - Deny Evalualtion
+    - Organizations SCP - > restrict access to certain AWS services in each account. 
+    - Resource-based Policies
+    - identity based policies
+    - IAM permission Boundaries
+    - Final decision
+AWS IAM identity center(AWS SSO)
+AWS IAM identity center 
+Permission sets for groups associated with OU accounts
+
+AWS Dorectory services:
+    - AWS managed Microsoft AD 
+    - AD Connector 
+    - Simple AD
+
+AWS COntrol Tower 
+    - AWS guardrails
