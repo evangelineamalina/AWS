@@ -1,0 +1,52 @@
+CloudWatch metrics
+    - /metric is  a variable to monitor like CPU/NW
+    - cloudwatch custom metrics
+
+CloudWatch logs
+    - Log groups
+    - Log streams
+    - Can define Log expiry date
+    - All logs are encrypted by default
+    - Logs can be sent to Kinesis , S3, Lambda, OpenSearch
+    Sources:
+        - Route53
+        - CloudTrail
+        - VPC flow
+        - EBS
+        - ECS
+        - SDK
+        - API Gateway
+CloudWatch Logs Insights - Query the logs
+Cloudwatch Logs & Unifoed logs in ec2
+    - need agents running in EC2 instance to push the logs
+    - IAM permissions
+    - Can install agent in on-prems too
+
+CloudWatch Alarms
+    - Trigger alarm for any metrics
+    status:
+        - OK
+        - Insifficient
+        - ALARM
+    Composite Alarms
+        - combination of multiple metrics with AND /OR
+
+EC2 instance recovery:
+    Status Check:
+        - Insatance status
+        - System Status
+        - Attached EBS status
+AWS EventBridge:
+    - Cronjob Schedule every hour -->trigger a lambda function
+    - IAM Root user access -> triiger a SNS with email notification 
+    types:
+        - default eventbus
+        - custom eventbus
+        - partner eventbus
+Cloudwatch container insights
+    - Collects logs & metrics from ECS , EKS
+
+Cloudwatch Lambda insights
+    - Monitoring &  troubleshooting for serverless applications running as AWS lambda
+
+Cludwatch Contributer Insights
