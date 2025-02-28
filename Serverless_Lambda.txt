@@ -1,0 +1,24 @@
+Serverless services in AWS:
+    - Lambda
+    - DynamoDB
+    - Kinesis Firehose
+    - SNS & SQS
+    - Aurora Serverless
+    - Cognito
+    - API Gateway
+    - S3
+    - Step Functions
+    - Fargate
+
+Lambda benefits:
+    - easy pricing
+    - Integration with whole AWS suite
+    - many programming languages
+    - AWS cloudwatch Monitoring
+    - More resources per function
+
+Lambda pricing
+    - First 1,000,000 requests are free 
+    - $.20 per 1 million requests
+    - 400,000 GB seconds of computation time is free 
+    - Very cheap & very popular

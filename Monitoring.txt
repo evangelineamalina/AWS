@@ -2,6 +2,8 @@ CloudWatch metrics
     - /metric is  a variable to monitor like CPU/NW
     - cloudwatch custom metrics
 
+  CloudWatch metric Stream is CloudWatch feature that allows you to send CloudWatch metrics in near real-time to S3 bucket (through Kinesis Data Firehose) and 3rd party destinations (e.g., Splunk, Datad
+
 CloudWatch logs
     - Log groups
     - Log streams
@@ -50,3 +52,32 @@ Cloudwatch Lambda insights
     - Monitoring &  troubleshooting for serverless applications running as AWS lambda
 
 Cludwatch Contributer Insights
+    - Top contributers
+    - Total number of Unique contributers
+
+CloudWatch application Insights
+    - Auto dashboards to troubleshoot applications & related AWS services
+
+AWS CloudTrial
+    - Provide Governance, Compliance , Audit for your AWS account
+    - Global service
+    Events:
+        - Management Events
+        - Data Events
+        - CloudTrail Insights Events -  detect unusual activity in your AWS Account
+    - CloudTrail events are stored for 90days , to keep beyond send to S3 and use athena to manage
+
+User--> delete API call to delete something in DynamoDB--> Cloud trail captured--> also captures in Event Bridge--> Alerts SNS
+
+AWS Config:
+    - Helps in recording compliance of AWS resources
+    - Records config changes over time
+    Rules:
+    - AWS Config Rules
+    - Custom Config Rules
+
+Load balancer example:
+    CloudTrail -> Check who mad changes to your LB with API calls
+    CloudWatch -> monitor the performance and error code and create dashboard of your LN
+    Config -> Create a compliance rule like always a SSL certificate shd be attached to a LB
+
