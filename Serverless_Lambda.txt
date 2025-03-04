@@ -16,9 +16,94 @@ Lambda benefits:
     - many programming languages
     - AWS cloudwatch Monitoring
     - More resources per function
+    - Lambda does not have an out-of-the-box caching feature.
 
 Lambda pricing
     - First 1,000,000 requests are free 
     - $.20 per 1 million requests
     - 400,000 GB seconds of computation time is free 
     - Very cheap & very popular
+    - The maximum timeout you can configure in Lambda is 15 minutes.
+
+Cloudfront functions & Lambda@Edge 
+    - Website security
+    - SEO 
+    - user Auth & authorization 
+    - User prioritazion
+    - User tracking & Analysis
+Cloudfront:
+    - CDN customization
+    - Javascript
+    - URL rewrite / redirect 
+    - Header manipulation
+    - Amazon CloudFront is a fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency, high transfer speeds. This is a perfect use case for Amazon CloudFront.
+    - Amazon CloudFront can be used in front of an Application Load Balancer.
+
+Lambda@Edge
+    - NodeJS / Python
+    - Longer exec time 
+    - can depend on 3rd party libraries
+    - NW access to external services
+
+- By default Lambda is launched outside the VPC in AWS owned VPC
+- need to define the VPC ID, subnet & sec groups & lambda will create an ENI in your subnet
+
+RD Proxy --> used to control traffic, improve scalability & DB connections . It's not publicly accessible 
+
+DynamoDB: 
+    - Fully managed HA with replicationa across AZ 
+    - NoSQL DB
+    - Masssive workloads 
+    - IAM for security 
+    - Low cost & auto-scaling 
+    - Always available 
+    - Max size is 400KB 
+    - Made of tables, each table have a primary key 
+    Provision mode:
+        - specific NO of read & writes
+        - auto-caling for RCU & WCU
+        - RCU and WCU are decoupled, so you can increase/decrease each value separately.
+    On-demand Mode:
+        - for unpredictable workloads & steep sudden spikes 
+        - Pay for what you use 
+
+DynamoDB Accelerator (DAX) 
+    - fully managed in-memory cache for DynamoDB 
+    - Application --> DAX --> DynamoDB 
+    5 Mins Cache for TTL 
+DynamoDB Stream processing:
+    - welcome email for any new user 
+    - real time analytics 
+    - DynamoDB Streams enable DynamoDB to get a changelog and use that changelog to replicate data across replica tables in other AWS Regions.
+DynamoDb Global tables:
+    - low latency 
+    - active - active replication 
+DynamoDB TTL 
+    - Aoto deletion of items after expiry 
+DynamoDB integration with S3
+    - can be imported from S3 in SV ION format 
+    - Can be imported to s3 
+    - no write capacity 
+    - errors are logged into cloudwatch 
+
+Client --> API Gateway -->  Labmda --> DynamoDB 
+API AGteway security:
+    - IAM 
+    - Cognito for external mobile users 
+    - Custom Authrorization (lambda function)
+    - Integration with ACM 
+    - Edge-optimization endpoint / regional endpoints 
+    - An Edge-Optimized API Gateway is best for geographically distributed clients. API requests are routed to the nearest CloudFront Edge Location which improves latency. The API Gateway still lives in one AWS Region.
+
+AWS Step functions:
+    - to orchestrate lambda functions 
+    - include human approval steps 
+    - can integrate with EC2, ECS, API gateway SQS 
+    - Any kind of complex workflow 
+AWS Cognito :
+    - For eternal users outside AWS like mobile/ web 
+    - Cognoto user pool
+    - Identity pool 
+    - auth with SAML / mobile users / hundreds of users 
+    - Amazon Cognito lets you add user sign-up, sign-in, and access control to your web and mobile apps quickly and easily. Amazon Cognito scales to millions of users and supports sign-in with social identity providers, such as Apple, Facebook, Google, and Amazon, and enterprise identity providers via SAML 2.0 and OpenID Connect.
+

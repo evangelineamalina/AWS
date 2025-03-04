@@ -1,0 +1,17 @@
+Server side encryption
+client-side encryption
+
+Aws KMS service:
+    - fully integrated with IAM
+    - Audit KMS key using ClousTrail
+    - Seamless integration
+    types:
+    - symmetric( AES 256 keys) - single key to encrypt & decrypt
+    - Asymmetric (RSA ECC Key pairs)- Publick key to encrypt & Private to decrypt
+    - AWS owned keys
+    - AWS amanged keys 
+    - customer managed keys 
+
+KMS multi-region keys 
+    - Primary+replicas in other regions
+    - Encrypt in one and decrypt in other
